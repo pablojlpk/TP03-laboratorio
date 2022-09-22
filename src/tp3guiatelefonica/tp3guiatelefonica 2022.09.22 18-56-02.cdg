@@ -14,16 +14,16 @@
     <Class name="Guia" package="" visibility="public" xPosition="612.0" yPosition="170.0">
       <Fields>
         <Field name="Cliente" type="HashMap" visibility="private"/>
-        <Field name="NroTel" type="Integer" visibility="private"/>
+        <Field name="NroTel" type="long" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
         <Method name="agregarCliente" returnType="void" visibility="public"/>
         <Method name="buscarCliente" returnType="Cliente" visibility="public"/>
         <Method name="buscarTelefono" returnType="void" visibility="public">
-          <Argument type="long" name="telefono"/>
+          <Argument type="long" name="tel"/>
         </Method>
-        <Method name="buscarClientes" returnType="void" visibility="public"/>
+        <Method name="buscarClientes" returnType="set" visibility="public"/>
         <Method name="borrarCliente" returnType="void" visibility="public"/>
       </Methods>
     </Class>
