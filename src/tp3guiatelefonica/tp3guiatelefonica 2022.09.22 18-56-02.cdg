@@ -14,7 +14,11 @@
     <Class name="Guia" package="" visibility="public" xPosition="664.0" yPosition="130.0">
       <Fields>
         <Field name="Cliente" type="HashMap" visibility="private"/>
+<<<<<<< HEAD
         <Field name="nroTel" type="Long" visibility="private"/>
+=======
+        <Field name="NroTel" type="long" visibility="private"/>
+>>>>>>> dddf85b001aba6972a8654dd1727a50df922b0e6
       </Fields>
       <Constructors/>
       <Methods>
@@ -26,9 +30,9 @@
           <Argument type="long" name="nroTel"/>
         </Method>
         <Method name="buscarTelefono" returnType="void" visibility="public">
-          <Argument type="long" name="telefono"/>
+          <Argument type="long" name="tel"/>
         </Method>
-        <Method name="buscarClientes" returnType="void" visibility="public"/>
+        <Method name="buscarClientes" returnType="set" visibility="public"/>
         <Method name="borrarCliente" returnType="void" visibility="public"/>
       </Methods>
     </Class>
