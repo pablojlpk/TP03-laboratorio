@@ -11,7 +11,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Guia" package="" visibility="public" xPosition="670.0" yPosition="130.0">
+    <Class name="Guia" package="tp3guiatelefonica" visibility="public" xPosition="670.0" yPosition="130.0">
       <Fields>
         <Field name="Cliente" type="HashMap" visibility="private"/>
         <Field name="nroTel" type="long" visibility="private"/>
@@ -36,7 +36,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Cliente" package="" visibility="public" xPosition="317.0" yPosition="346.0">
+    <Class name="Cliente" package="tp3guiatelefonica" visibility="public" xPosition="317.0" yPosition="346.0">
       <Fields>
         <Field name="DNI" type="Integer" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
@@ -53,7 +53,7 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="tiene" source="Guia" target="Cliente" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
-    <UseRelation name="usa" source="Guia" target="tp3guiatelefonica.TP3GuiaTelefonica" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="tp3guiatelefonica.Guia" target="tp3guiatelefonica.Cliente" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <UseRelation name="usa" source="tp3guiatelefonica.Guia" target="tp3guiatelefonica.TP3GuiaTelefonica" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
