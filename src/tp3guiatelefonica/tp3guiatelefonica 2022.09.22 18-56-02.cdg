@@ -11,14 +11,10 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Guia" package="" visibility="public" xPosition="664.0" yPosition="130.0">
+    <Class name="Guia" package="" visibility="public" xPosition="670.0" yPosition="130.0">
       <Fields>
         <Field name="Cliente" type="HashMap" visibility="private"/>
-<<<<<<< HEAD
-        <Field name="nroTel" type="Long" visibility="private"/>
-=======
-        <Field name="NroTel" type="long" visibility="private"/>
->>>>>>> dddf85b001aba6972a8654dd1727a50df922b0e6
+        <Field name="nroTel" type="long" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
@@ -29,25 +25,31 @@
         <Method name="buscarCliente" returnType="Cliente" visibility="public">
           <Argument type="long" name="nroTel"/>
         </Method>
-        <Method name="buscarTelefono" returnType="void" visibility="public">
-          <Argument type="long" name="tel"/>
+        <Method name="buscarTelefono" returnType="HastSet&lt;nroTel&gt;" visibility="public">
+          <Argument type="String" name="apellido"/>
         </Method>
-        <Method name="buscarClientes" returnType="set" visibility="public"/>
-        <Method name="borrarCliente" returnType="void" visibility="public"/>
+        <Method name="buscarClientes" returnType="HastSet&lt;Cliente&gt;" visibility="public">
+          <Argument type="String" name="Ciudad"/>
+        </Method>
+        <Method name="borrarCliente" returnType="void" visibility="public">
+          <Argument type="long" name="nroTel"/>
+        </Method>
       </Methods>
     </Class>
     <Class name="Cliente" package="" visibility="public" xPosition="317.0" yPosition="346.0">
       <Fields>
         <Field name="DNI" type="Integer" visibility="private"/>
-        <Field name="Apellido" type="String" visibility="private"/>
-        <Field name="Nombre" type="String" visibility="private"/>
-        <Field name="Direccion" type="String" visibility="private"/>
-        <Field name="Ciudad" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="ciudad" type="String" visibility="private"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
       </Constructors>
-      <Methods/>
+      <Methods>
+        <Method name="getandset" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
