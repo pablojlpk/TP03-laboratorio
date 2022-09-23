@@ -50,6 +50,7 @@ public class TP3GuiaTelefonica {
                 case '3':
                     System.out.println("Ingrese la ciudad ");
                     gu.buscarClientes(leer.next());
+                    
                     break;
                     
                 case '4':

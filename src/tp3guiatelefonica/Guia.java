@@ -31,9 +31,10 @@ public class Guia {
     }
 
     public HashSet<Cliente> buscarClientes(String ciudad) {
-        HashSet<Cliente> city = new HashSet();// corregir con set
+        HashSet<Cliente> city = new HashSet();
+        
         for (Map.Entry<Long,Cliente> entry : guiaTel.entrySet()) {
-            if (entry.getValue().getApellido().equalsIgnoreCase(ciudad)){
+            if (entry.getValue().getCiudad().equalsIgnoreCase(ciudad)){
                 city.add(entry.getValue());
             }
         }
