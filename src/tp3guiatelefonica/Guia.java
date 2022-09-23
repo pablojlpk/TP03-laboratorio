@@ -3,6 +3,7 @@ package tp3guiatelefonica;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Guia {
 
@@ -26,8 +27,8 @@ public class Guia {
        return telApellido;
     }
 
-    public ArrayList<Long> buscarClientes(String ciudad) {
-        ArrayList<Long> telCiudad = new ArrayList();
+    public Set<Long> buscarClientes(String ciudad) {
+        Set<Long> telCiudad = new Set();// corregir con set
         for (Map.Entry<Long,Cliente> entry : guiaTel.entrySet()) {
             if (entry.getValue().getApellido().equalsIgnoreCase(ciudad)){
                 telCiudad.add(entry.getKey());

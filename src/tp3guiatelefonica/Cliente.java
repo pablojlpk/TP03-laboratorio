@@ -1,5 +1,7 @@
 package tp3guiatelefonica;
 
+import java.util.Objects;
+
 public class Cliente {
 
     private Integer DNI;
@@ -60,5 +62,46 @@ public class Cliente {
         return "Cliente{" + "DNI=" + DNI + ", apellido=" + apellido + ", nombre=" + nombre + ", direccion=" + direccion + ", ciudad=" + ciudad + '}';
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.DNI);
+        hash = 89 * hash + Objects.hashCode(this.apellido);
+        hash = 89 * hash + Objects.hashCode(this.nombre);
+        hash = 89 * hash + Objects.hashCode(this.direccion);
+        hash = 89 * hash + Objects.hashCode(this.ciudad);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cliente other = (Cliente) obj;
+        if (!Objects.equals(this.apellido, other.apellido)) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.direccion, other.direccion)) {
+            return false;
+        }
+        if (!Objects.equals(this.ciudad, other.ciudad)) {
+            return false;
+        }
+        if (!Objects.equals(this.DNI, other.DNI)) {
+            return false;
+        }
+        return true;
+    }
+    
    
 }
