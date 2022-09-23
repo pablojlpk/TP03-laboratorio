@@ -55,7 +55,7 @@ public class TP3GuiaTelefonica {
                     
                 case '4':
                        System.out.println("Ingrese el apellido que desea buscar su teléfono");
-                       gu.buscarTelefono(leer.next());
+                       System.out.println("el apellido se encuentra asociado a estos numeros"+gu.buscarTelefono(leer.next()));
                     break;
                 case '5':
                     System.out.println("ingrese el nro telefónico del cliente que desea borrar");
