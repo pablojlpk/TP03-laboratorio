@@ -64,12 +64,8 @@ public class Cliente {
 
     @Override
     public int hashCode() {
-        int hash = 7;
+        int hash = 5;
         hash = 89 * hash + Objects.hashCode(this.DNI);
-        hash = 89 * hash + Objects.hashCode(this.apellido);
-        hash = 89 * hash + Objects.hashCode(this.nombre);
-        hash = 89 * hash + Objects.hashCode(this.direccion);
-        hash = 89 * hash + Objects.hashCode(this.ciudad);
         return hash;
     }
 
@@ -85,23 +81,16 @@ public class Cliente {
             return false;
         }
         final Cliente other = (Cliente) obj;
-        if (!Objects.equals(this.apellido, other.apellido)) {
-            return false;
-        }
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        if (!Objects.equals(this.direccion, other.direccion)) {
-            return false;
-        }
-        if (!Objects.equals(this.ciudad, other.ciudad)) {
-            return false;
-        }
         if (!Objects.equals(this.DNI, other.DNI)) {
             return false;
         }
         return true;
     }
+
+   
+    }
+
+    
     
    
 }
