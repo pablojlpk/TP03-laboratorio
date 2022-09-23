@@ -25,7 +25,7 @@ public class TP3GuiaTelefonica {
             op = leer.next().toUpperCase().charAt(0);
             switch (op) {
                 case '1':
-                    cli= new Cliente();
+                    cli = new Cliente();
                     System.out.println("Ingrese el DNI");
                     cli.setDNI(leer.nextInt());
                     System.out.println("Ingrese el Apellido");
@@ -37,14 +37,15 @@ public class TP3GuiaTelefonica {
                     System.out.println("Infrese la ciudad");
                     cli.setCiudad(leer.next());
                     System.out.println("Ingrese el nro de Telefono");
-                    nrotel=leer.nextLong();
-                   gu.agregarCliente(cli, nrotel);
+                    nrotel = leer.nextLong();
+                    gu.agregarCliente(cli, nrotel);
 
                     break;
                 case '2':
                     System.out.println("Ingrese el nro de teléfono");
-                    nrotel=leer.nextLong();
+                    nrotel = leer.nextLong();
                     System.out.println(gu.buscarCliente(nrotel));
+
                     break;
                 case '3':
 
