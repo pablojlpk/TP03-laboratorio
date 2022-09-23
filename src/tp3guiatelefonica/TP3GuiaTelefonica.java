@@ -49,7 +49,7 @@ public class TP3GuiaTelefonica {
                     break;
                 case '3':
                     System.out.println("Ingrese la ciudad ");
-                    gu.buscarClientes(leer.next());
+                    System.out.println(gu.buscarClientes(leer.next()));
                     
                     break;
                     
