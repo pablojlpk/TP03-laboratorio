@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import javax.swing.JOptionPane;
 
 
 public class Guia {
@@ -29,22 +30,35 @@ public class Guia {
        return telApellido;
     }
 
-    public HashSet<Long> buscarClientes(String ciudad) {
-        HashSet<Long> telCiudad = new HashSet();// corregir con set
+    public HashSet<Cliente> buscarClientes(String ciudad) {
+        HashSet<Cliente> city = new HashSet();// corregir con set
         for (Map.Entry<Long,Cliente> entry : guiaTel.entrySet()) {
             if (entry.getValue().getApellido().equalsIgnoreCase(ciudad)){
-                telCiudad.add(entry.getKey());
+                city.add(entry.getValue());
             }
         }
-       return telCiudad;
+       return city;
     }
 
     public void borrarCliente(long nroTel) {
+        
+        for (Map.Entry<Long, Cliente> entry : guiaTel.entrySet()) {
+           if(nroTel == entry.getKey()){
+                       guiaTel.remove(nroTel);
+                       JOptionPane.showMessageDialog(null,"El cliente fue eliminado");
+
+           } else{
+               JOptionPane.showMessageDialog(null,"no se encuentra asociado ningun cliente a ese numero");
+
+            
+        }
     }
+
+   
+}
 
     @Override
     public String toString() {
         return "Guia{" + "guiaTel=" + guiaTel + '}';
     }
-
 }
