@@ -48,12 +48,18 @@ public class TP3GuiaTelefonica {
 
                     break;
                 case '3':
-
+                    System.out.println("Ingrese la ciudad ");
+                    gu.buscarClientes(leer.next());
                     break;
+                    
                 case '4':
-
+                       System.out.println("Ingrese el apellido que desea buscar su teléfono");
+                       gu.buscarTelefono(leer.next());
                     break;
                 case '5':
+                    System.out.println("ingrese el nro telefónico del cliente que desea borrar");
+                    nrotel = leer.nextLong();
+                    gu.borrarCliente(nrotel);
 
                     break;
                 case 'S':
