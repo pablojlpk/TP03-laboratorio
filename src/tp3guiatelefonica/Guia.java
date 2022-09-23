@@ -17,6 +17,7 @@ public class Guia {
     public Cliente buscarCliente(long nroTel) {
         return guiaTel.get(nroTel);
     }
+    
 
     public ArrayList<Long> buscarTelefono(String apellido) {
        ArrayList<Long> telApellido = new ArrayList();
