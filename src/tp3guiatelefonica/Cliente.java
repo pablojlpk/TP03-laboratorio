@@ -55,5 +55,10 @@ public class Cliente {
         this.ciudad = ciudad;
     }
 
+    @Override
+    public String toString() {
+        return "Cliente{" + "DNI=" + DNI + ", apellido=" + apellido + ", nombre=" + nombre + ", direccion=" + direccion + ", ciudad=" + ciudad + '}';
+    }
+
    
 }

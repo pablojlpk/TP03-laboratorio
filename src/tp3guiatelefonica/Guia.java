@@ -38,4 +38,10 @@ public class Guia {
 
     public void borrarCliente(long nroTel) {
     }
+
+    @Override
+    public String toString() {
+        return "Guia{" + "guiaTel=" + guiaTel + '}';
+    }
+
 }
