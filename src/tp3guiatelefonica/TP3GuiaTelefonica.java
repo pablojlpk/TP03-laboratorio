@@ -1,6 +1,7 @@
 package tp3guiatelefonica;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class TP3GuiaTelefonica {
 
@@ -37,8 +38,8 @@ public class TP3GuiaTelefonica {
                     cli.setCiudad(leer.next());
                     System.out.println("Ingrese el nro de Telefono");
                     nrotel=leer.nextLong();
-                    gu.agregarCliente(cli, nrotel);
-                    
+                   gu.agregarCliente(cli, nrotel);
+
                     break;
                 case '2':
                     System.out.println("Ingrese el nro de teléfono");
