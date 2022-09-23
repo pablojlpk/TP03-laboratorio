@@ -1,33 +1,39 @@
 package tp3guiatelefonica;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Guia {
-    private Long nroTel;
-    private Cliente cliente;
+
     private HashMap< Long, Cliente > guiaTel = new HashMap();
 
-    //HashMap<String,Float> listaProductos = new HashMap<String,Float>()
-
-    public Guia(Long nroTel, Cliente cliente) {
-        this.nroTel = nroTel;
-        this.cliente = cliente;
-    }
-    
-
-    public void agregarCliente(Cliente cliente, long nroTel) {
+    public boolean agregarCliente(Cliente cliente, long nroTel) {
+       return guiaTel.put(nroTel, cliente)== null;
     }
 
     public Cliente buscarCliente(long nroTel) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return guiaTel.get(nroTel);
     }
 
-    public HastSet<nroTel> buscarTelefono(String apellido) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public ArrayList<Long> buscarTelefono(String apellido) {
+       ArrayList<Long> telApellido = new ArrayList();
+        for (Map.Entry<Long,Cliente> entry : guiaTel.entrySet()) {
+            if (entry.getValue().getApellido().equalsIgnoreCase(apellido)){
+                telApellido.add(entry.getKey());
+            }
+        }
+       return telApellido;
     }
 
-    public HastSet<Cliente> buscarClientes(String Ciudad) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public ArrayList<Long> buscarClientes(String ciudad) {
+        ArrayList<Long> telCiudad = new ArrayList();
+        for (Map.Entry<Long,Cliente> entry : guiaTel.entrySet()) {
+            if (entry.getValue().getApellido().equalsIgnoreCase(ciudad)){
+                telCiudad.add(entry.getKey());
+            }
+        }
+       return telCiudad;
     }
 
     public void borrarCliente(long nroTel) {
