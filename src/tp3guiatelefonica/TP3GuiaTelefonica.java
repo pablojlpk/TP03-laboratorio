@@ -25,6 +25,13 @@ public class TP3GuiaTelefonica {
             op = leer.next().toUpperCase().charAt(0);
             switch (op) {
                 case '1':
+                    //-----------
+                    //línea 1-instanciamos un objeto de la clase Formulario2.java
+                    Frcliente verform = new Frcliente();
+                    //línea 2-hacemos visible el formulario que queremos llamar 
+                    verform.setVisible(true);
+                    
+/*
                     cli = new Cliente();
                     System.out.println("Ingrese el DNI");
                     cli.setDNI(leer.nextInt());
@@ -39,7 +46,7 @@ public class TP3GuiaTelefonica {
                     System.out.println("Ingrese el nro de Telefono");
                     nrotel = leer.nextLong();
                     gu.agregarCliente(cli, nrotel);
-
+*/
                     break;
                 case '2':
                     System.out.println("Ingrese el nro de teléfono");
@@ -51,10 +58,10 @@ public class TP3GuiaTelefonica {
                     System.out.println("Ingrese la ciudad ");
                     gu.buscarClientes(leer.next());
                     break;
-                    
+
                 case '4':
-                       System.out.println("Ingrese el apellido que desea buscar su teléfono");
-                       System.out.println(gu.buscarTelefono(leer.next()));
+                    System.out.println("Ingrese el apellido que desea buscar su teléfono");
+                    System.out.println(gu.buscarTelefono(leer.next()));
                     break;
                 case '5':
                     System.out.println("ingrese el nro telefónico del cliente que desea borrar");
