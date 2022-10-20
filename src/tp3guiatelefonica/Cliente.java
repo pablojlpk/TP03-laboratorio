@@ -1,6 +1,7 @@
 package tp3guiatelefonica;
 
 import java.util.Objects;
+import javax.swing.JTextField;
 
 public class Cliente {
 
@@ -15,7 +16,22 @@ public class Cliente {
     private String ciudad;
 
     public Cliente() {
+        
     }
+
+    public Cliente(Integer DNI, String apellido, String nombre, String direccion, String ciudad) {
+        this.DNI = DNI;
+        this.apellido = apellido;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.ciudad = ciudad;
+    }
+
+    Cliente(JTextField txdni, JTextField txapellido, JTextField txnombre, JTextField txdireccion, JTextField txciudad) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
 
     public Integer getDNI() {
         return DNI;
