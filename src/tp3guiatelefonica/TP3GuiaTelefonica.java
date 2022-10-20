@@ -49,10 +49,15 @@ public class TP3GuiaTelefonica {
 */
                     break;
                 case '2':
+                    FrBuscarCliente verbc = new FrBuscarCliente();
+                    //línea 2-hacemos visible el formulario que queremos llamar 
+                    verbc.setVisible(true);
+                                     
+                    /*
                     System.out.println("Ingrese el nro de teléfono");
                     nrotel = leer.nextLong();
                     System.out.println(gu.buscarCliente(nrotel));
-
+*/
                     break;
                 case '3':
                     System.out.println("Ingrese la ciudad ");
