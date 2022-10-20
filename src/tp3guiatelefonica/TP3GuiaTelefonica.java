@@ -49,7 +49,7 @@ public class TP3GuiaTelefonica {
 */
                     break;
                 case '2':
-                    FrBuscarCliente verbc = new FrBuscarCliente();
+                    FrBuscarCliente verbc = new FrBuscarCliente(gu);
                     //línea 2-hacemos visible el formulario que queremos llamar 
                     verbc.setVisible(true);
                                      

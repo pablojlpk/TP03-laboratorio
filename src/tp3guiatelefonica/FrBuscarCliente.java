@@ -14,7 +14,7 @@ public class FrBuscarCliente extends javax.swing.JFrame {
     /**
      * Creates new form FrBuscarCliente
      */
-    public FrBuscarCliente() {
+    public FrBuscarCliente(Guia gu) {
         initComponents();
     }
 
