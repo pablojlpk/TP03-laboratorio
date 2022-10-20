@@ -76,6 +76,11 @@ public class FrBuscarCliente extends javax.swing.JFrame {
 
         BBuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         BBuscar.setText("Buscar Cliente por Nro Telefono");
+        BBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BBuscarActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Saliir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -167,6 +172,10 @@ public class FrBuscarCliente extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BBuscarActionPerformed
 
    
 
