@@ -45,20 +45,14 @@ public class Guia {
 
     public void borrarCliente(long nroTel) {
         
-        for (Map.Entry<Long, Cliente> entry : guiaTel.entrySet()) {
-           if(nroTel == entry.getKey()){
-                       guiaTel.remove(nroTel);
-                       JOptionPane.showMessageDialog(null,"El cliente fue eliminado");
-
-           } else{
-               JOptionPane.showMessageDialog(null,"no se encuentra asociado ningun cliente a ese numero");
-
-            
+        if( guiaTel.remove(nroTel)!=null){
+            JOptionPane.showMessageDialog(null,"El cliente fue eliminado");
+        }else{
+            JOptionPane.showMessageDialog(null,"no se encuentra asociado ningun cliente a ese numero");
         }
+       
     }
 
-   
-}
 
     @Override
     public String toString() {
