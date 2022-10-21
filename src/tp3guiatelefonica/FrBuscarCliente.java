@@ -14,7 +14,10 @@ public class FrBuscarCliente extends javax.swing.JFrame {
     /**
      * Creates new form FrBuscarCliente
      */
+    Guia gu;
+    
     public FrBuscarCliente(Guia gu) {
+        this.gu=gu;
         initComponents();
     }
 
@@ -174,7 +177,11 @@ public class FrBuscarCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBuscarActionPerformed
+<<<<<<< HEAD
         // TODO add your handling code here:
+=======
+gu.buscarCliente()        // TODO add your handling code here:
+>>>>>>> 1e87addbbdb4034cf83310969dd73be6c5f008f7
     }//GEN-LAST:event_BBuscarActionPerformed
 
    
