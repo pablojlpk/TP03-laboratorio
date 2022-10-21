@@ -43,7 +43,7 @@ public class TP3GuiaTelefonica {
                 case '2':
                     FrBuscarCliente verbc = new FrBuscarCliente(gu);
                     verbc.setVisible(true);
-                    gu.buscarCliente(123456);
+                    
 
                     break;
                 case '3':
@@ -54,6 +54,8 @@ public class TP3GuiaTelefonica {
                 case '4':
                     System.out.println("Ingrese el apellido que desea buscar su teléfono");
                     System.out.println(gu.buscarTelefono(leer.next()));
+                   
+                   
                     break;
                 case '5':
                     FrBorrarCliente borracli = new FrBorrarCliente(gu);
