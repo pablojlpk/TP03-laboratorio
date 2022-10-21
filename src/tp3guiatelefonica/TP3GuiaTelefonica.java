@@ -26,7 +26,7 @@ public class TP3GuiaTelefonica {
             System.out.println("MENU PRINCIPAL");
             System.out.println("1- ALTA Cliente");
             System.out.println("2- BUSCA Cliente");
-            System.out.println("3- BUSCA Clientes");
+            System.out.println("3- BUSCA Clientes por Ciudad");
             System.out.println("4- Busca Teléfono");
             System.out.println("5- Borrar Cliente");
             System.out.println("S- Salir");
@@ -36,39 +36,15 @@ public class TP3GuiaTelefonica {
                 case '1':
                     //-----------
                     //línea 1-instanciamos un objeto de la clase Formulario2.java
-                    Frcliente verform = new Frcliente();
+                    Frcliente verform = new Frcliente(gu);
                     //línea 2-hacemos visible el formulario que queremos llamar 
                     verform.setVisible(true);
-                    
-/*
-                    cli = new Cliente();
-                    System.out.println("Ingrese el DNI");
-                    cli.setDNI(leer.nextInt());
-                    System.out.println("Ingrese el Apellido");
-                    cli.setApellido(leer.next());
-                    System.out.println("Ingrese el nombre");
-                    cli.setNombre(leer.next());
-                    System.out.println("ingrese la dirección");
-                    cli.setDireccion(leer.next());
-                    System.out.println("Infrese la ciudad");
-                    cli.setCiudad(leer.next());
-                    System.out.println("Ingrese el nro de Telefono");
-                    nrotel = leer.nextLong();
-                    gu.agregarCliente(cli, nrotel);
-*/
                     break;
                 case '2':
                     FrBuscarCliente verbc = new FrBuscarCliente(gu);
-                    
                     verbc.setVisible(true);
-                    
-                    
                     gu.buscarCliente(123456);
-                    /*
-                    System.out.println("Ingrese el nro de teléfono");
-                    nrotel = leer.nextLong();
-                    System.out.println(gu.buscarCliente(nrotel));
-*/
+
                     break;
                 case '3':
                     System.out.println("Ingrese la ciudad ");

@@ -14,11 +14,8 @@ import javax.swing.JOptionPane;
  */
 public class FrBuscarCliente extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrBuscarCliente
-     */
     Guia gu;
-//public Cliente(Integer DNI, String apellido, String nombre, String direccion, String ciudad)
+
     
 
 
