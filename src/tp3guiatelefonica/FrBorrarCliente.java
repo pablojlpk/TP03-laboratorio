@@ -41,8 +41,8 @@ public class FrBorrarCliente extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        dni = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        ldni = new javax.swing.JLabel();
+        txdni = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         apellido = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -73,13 +73,13 @@ public class FrBorrarCliente extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 255));
         jLabel3.setText("Teléfono");
 
-        dni.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        dni.setForeground(new java.awt.Color(51, 51, 255));
-        dni.setText("DNI");
+        ldni.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ldni.setForeground(new java.awt.Color(51, 51, 255));
+        ldni.setText("DNI");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txdni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txdniActionPerformed(evt);
             }
         });
 
@@ -127,13 +127,13 @@ public class FrBorrarCliente extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
-                            .addComponent(dni)
+                            .addComponent(ldni)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
+                            .addComponent(txdni)
                             .addComponent(apellido)
                             .addComponent(nombre)
                             .addComponent(ciudad)
@@ -159,8 +159,8 @@ public class FrBorrarCliente extends javax.swing.JFrame {
                     .addComponent(telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dni)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ldni)
+                    .addComponent(txdni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -211,34 +211,32 @@ public class FrBorrarCliente extends javax.swing.JFrame {
 
     private void btborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btborrarActionPerformed
         // TODO add your handling code here:
-
-        
+      
         Cliente p = gu.buscarCliente(Long.parseLong(this.telefono.getText()));
 
         if (p != null) {
             this.apellido.setText(p.getApellido());
             this.nombre.setText(p.getNombre());
             this.ciudad.setText(p.getCiudad());
-            this.dni.setText(p.getDNI().toString());
+            this.txdni.setText(p.getDNI().toString());
             this.ciudad.setText(p.getDireccion());
             
         }else {
-        JOptionPane.showMessageDialog(this, "Cliente no Encontrado");    
+        JOptionPane.showMessageDialog(this, "Cliente "+this.apellido.getText()+" no Encontrado");    
         }
         gu.borrarCliente(Integer.parseInt(telefono.getText()));
         JOptionPane.showMessageDialog(this, "Cliente borrado"); 
     }//GEN-LAST:event_btborrarActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txdniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txdniActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txdniActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellido;
     private javax.swing.JToggleButton btborrar;
     private javax.swing.JTextField ciudad;
-    private javax.swing.JLabel dni;
     private javax.swing.JButton jBSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -249,8 +247,9 @@ public class FrBorrarCliente extends javax.swing.JFrame {
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel ldni;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField telefono;
+    private javax.swing.JTextField txdni;
     // End of variables declaration//GEN-END:variables
 }
