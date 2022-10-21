@@ -209,7 +209,13 @@ public class Frcliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     
         //Cliente(Integer DNI, String apellido, String nombre, String direccion, String ciudad)
-        Cliente cl = new Cliente(Integer.parseInt(txdni.getText()), this.txapellido, this.txnombre, this.txdireccion, this.txciudad);
+
+        
+        Cliente cl;
+        cl = new Cliente(Integer.parseInt(this.txdni.getText()), this.txapellido.getText(), this.txnombre.getText(), this.txdireccion.getText(), this.txciudad.getText());
+        
+        
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

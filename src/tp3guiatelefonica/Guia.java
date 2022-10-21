@@ -12,9 +12,11 @@ public class Guia {
     private HashMap< Long, Cliente > guiaTel = new HashMap();
 
     public boolean agregarCliente(Cliente cliente, long nroTel) {
-       return guiaTel.put(nroTel, cliente)== null;
+   
+        return guiaTel.put(nroTel, cliente)== null;
     }
 
+    
     public Cliente buscarCliente(long nroTel) {
         return guiaTel.get(nroTel);
     }

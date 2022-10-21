@@ -26,11 +26,11 @@ public class Cliente {
         this.direccion = direccion;
         this.ciudad = ciudad;
     }
-
+/*
     Cliente(JTextField txdni, JTextField txapellido, JTextField txnombre, JTextField txdireccion, JTextField txciudad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+*/
    
 
     public Integer getDNI() {

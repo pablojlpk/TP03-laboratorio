@@ -9,7 +9,16 @@ public class TP3GuiaTelefonica {
 
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         Guia gu = new Guia();
-        Cliente cli;
+        //Cliente cli;
+        Cliente c1i =  new Cliente(123,"pablo","Lopez","Rivadavia 538","San Luis");
+        Cliente c12 =  new Cliente(123,"Sanchez","Tomas","San Martin 125","Concaran");
+        Cliente c13 =  new Cliente(123,"pablo","Lopez","Los Nogales 45","Villa del Carmen");
+        gu.agregarCliente(c1i, 123);
+        gu.agregarCliente(c12, 1234);
+        gu.agregarCliente(c13, 12345);
+        
+        
+        
         long nrotel;
         char op;
         op = 'i';
@@ -50,9 +59,11 @@ public class TP3GuiaTelefonica {
                     break;
                 case '2':
                     FrBuscarCliente verbc = new FrBuscarCliente(gu);
-                    //línea 2-hacemos visible el formulario que queremos llamar 
+                    
                     verbc.setVisible(true);
-                                     
+                    
+                    
+                    gu.buscarCliente(123456);
                     /*
                     System.out.println("Ingrese el nro de teléfono");
                     nrotel = leer.nextLong();
