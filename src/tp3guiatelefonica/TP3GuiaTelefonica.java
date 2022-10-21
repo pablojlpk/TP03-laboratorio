@@ -25,9 +25,9 @@ public class TP3GuiaTelefonica {
         do {
             System.out.println("MENU PRINCIPAL");
             System.out.println("1- ALTA Cliente");
-            System.out.println("2- BUSCA Cliente");
+            System.out.println("2- BUSCA Cliente por Telefono");
             System.out.println("3- BUSCA Clientes por Ciudad");
-            System.out.println("4- Busca Teléfono");
+            System.out.println("4- Busca Teléfono por Apellido");
             System.out.println("5- Borrar Cliente");
             System.out.println("S- Salir");
             System.out.print("Ingrese una opción:  ");
