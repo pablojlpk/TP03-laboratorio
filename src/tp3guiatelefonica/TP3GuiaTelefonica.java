@@ -10,10 +10,10 @@ public class TP3GuiaTelefonica {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         Guia gu = new Guia();
         //Cliente cli;
-        Cliente c1i =  new Cliente(123,"pablo","Lopez","Rivadavia 538","San Luis");
-        Cliente c12 =  new Cliente(123,"Sanchez","Tomas","San Martin 125","Concaran");
-        Cliente c13 =  new Cliente(123,"pablo","Lopez","Los Nogales 45","Villa del Carmen");
-        Cliente c14 =  new Cliente(123,"Jimena","Seitz","Los Nogales 45","Villa del Carmen");
+        Cliente c1i =  new Cliente(123,"Lopez Pujato",Pablo","Rivadavia 538","San Luis");
+        Cliente c12 =  new Cliente(1234,"Sanchez","Tomas","San Martin 125","Concaran");
+        Cliente c13 =  new Cliente(12345,"Gomez","Pablo","Los Nogales 45","Villa del Carmen");
+        Cliente c14 =  new Cliente(12356,"Seitz","Jimena","Los Nogales 45","Villa del Carmen");
         gu.agregarCliente(c1i, 123);
         gu.agregarCliente(c12, 1234);
         gu.agregarCliente(c13, 12345);
