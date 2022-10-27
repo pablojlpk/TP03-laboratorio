@@ -18,9 +18,6 @@ public class TP3GuiaTelefonica {
         gu.agregarCliente(c12, 1234);
         gu.agregarCliente(c13, 12345);
         gu.agregarCliente(c14, 123456);
-        
-        
-        
         long nrotel;
         char op;
         op = 'i';
@@ -50,7 +47,7 @@ public class TP3GuiaTelefonica {
                     break;
                 case '3':
                     System.out.println("Ingrese la ciudad ");
-                    gu.buscarClientes(leer.next());
+                    System.out.println(gu.buscarClientes(leer.next()));
                     break;
 
                 case '4':
